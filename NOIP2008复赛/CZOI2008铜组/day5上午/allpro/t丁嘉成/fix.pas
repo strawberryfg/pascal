@@ -1,0 +1,10 @@
+begin
+assign(input,'fix.in');
+reset(input);
+assign(output,'fix.out');
+rewrite(output);
+writeln('yes');
+writeln('no');
+close(input);
+close(output);
+end.

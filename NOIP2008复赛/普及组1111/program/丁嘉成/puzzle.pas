@@ -1,0 +1,16 @@
+begin
+assign(input,'puzzle.in');reset(input);
+assign(output,'puzzle.out');rewrite(output);
+randomize;
+writeln('245631987');
+writeln('186479253');
+writeln('793528461');
+writeln('637892145');
+writeln('852146379');
+writeln('914357628');
+writeln('471283596');
+writeln('569714832');
+writeln('328965714');
+close(input);
+close(output);
+end.

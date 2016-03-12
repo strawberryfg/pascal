@@ -1,0 +1,36 @@
+var s1,s2,s3,h1,h2,h3,m1,m2,m3:longint;
+    str1,str2:string;
+begin
+assign(input,'natrij.in');
+reset(input);
+assign(output,'natrij.out');
+rewrite(output);
+readln(str1);
+str2:=copy(str1,1,2);
+val(str2,h1);
+str2:=copy(str1,4,2);
+val(str2,m1);
+str2:=copy(str1,7,2);
+val(str2,s1);
+readln(str1);
+str2:=copy(str1,1,2);
+val(str2,h2);
+str2:=copy(str1,4,2);
+val(str2,m2);
+str2:=copy(str1,7,2);
+val(str2,s2);
+if s2<s1 then begin dec(m2);s2:=s2+60;end;
+if m2<m1 then begin dec(h2);m2:=m2+60;end;
+h3:=(h2+24-h1)mod 24;
+m3:=m2-m1;
+s3:=s2-s1;
+if h3 div 10=0 then write(0);
+write(h3,':');
+if m3 div 10=0 then write(0);
+write(m3,':');
+if s3 div 10=0 then write(0);
+write(s3);
+writeln;
+close(input);
+close(output);
+end.

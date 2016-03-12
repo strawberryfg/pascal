@@ -1,0 +1,393 @@
+HTML {
+	BORDER-RIGHT: #ccc 1px solid
+}
+BODY {
+	BACKGROUND: #667383
+}
+DIV {
+	COLOR: #777777
+}
+TABLE {
+	COLOR: #777777
+}
+UL {
+	COLOR: #777777
+}
+P {
+	COLOR: #777777
+}
+A {
+	COLOR: #000000; TEXT-DECORATION: underline
+}
+A:hover {
+	COLOR: #f60; TEXT-DECORATION: underline
+}
+TEXTAREA {
+	
+}
+SELECT {
+	
+}
+INPUT.text {
+	
+}
+INPUT.button {
+	
+}
+#topPadding {
+	DISPLAY: none
+}
+#wrapper {
+	BACKGROUND: url(images/top.jpg) no-repeat center top
+}
+#innerWrapper {
+	BACKGROUND: none transparent scroll repeat 0% 0%; WIDTH: 996px
+}
+#header {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: none transparent scroll repeat 0% 0%; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; HEIGHT: 105px
+}
+#innerHeader {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px 10px; PADDING-TOP: 0px
+}
+#blogTitle {
+	CLEAR: both; MARGIN-TOP: 8px; DISPLAY: block; PADDING-LEFT: 65px; FLOAT: none; MARGIN-LEFT: 5px; PADDING-TOP: 20px; TEXT-ALIGN: center
+}
+#blogTitle A {
+	FONT-WEIGHT: bold; FONT-SIZE: 18px; COLOR: #000; LINE-HEIGHT: 1.4em; PADDING-TOP: 23px; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+#blogTitle INPUT {
+	FONT-WEIGHT: bold; FONT-SIZE: 18px; COLOR: #000; LINE-HEIGHT: 1.4em; PADDING-TOP: 23px; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+#blogTitle A:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 18px; COLOR: #f60; LINE-HEIGHT: 1.4em; PADDING-TOP: 5px; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+#blogTitle INPUT A:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 18px; COLOR: #f60; LINE-HEIGHT: 1.4em; PADDING-TOP: 5px; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+#blogUrl {
+	DISPLAY: block; FONT-SIZE: 12px; FLOAT: none; PADDING-BOTTOM: 5px; MARGIN-LEFT: 42px; FONT-FAMILY: Arial, Verdana; TEXT-ALIGN: center
+}
+#blogUrl A {
+	FONT-SIZE: 12px; MARGIN-LEFT: 5px; PADDING-TOP: 5px; FONT-FAMILY: Arial, Verdana; TEXT-ALIGN: center
+}
+#blogUrl A:link {
+	COLOR: #000
+}
+#blogUrl A:visited {
+	COLOR: #000
+}
+#blogUrl A:hover {
+	COLOR: #f60
+}
+#blogDesc {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 14px; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 5px 62px; COLOR: #000; PADDING-TOP: 1px; TEXT-ALIGN: center
+}
+#optionNav LI {
+	WHITE-SPACE: nowrap
+}
+#optionNav LI A {
+	COLOR: #444
+}
+#optionNav LI A:hover {
+	COLOR: #f00
+}
+#navBar A {
+	FONT-SIZE: 12px; COLOR: #444; TEXT-DECORATION: none
+}
+#navBar A:hover {
+	FONT-SIZE: 12px; COLOR: #f00; TEXT-DECORATION: none
+}
+#navBar {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: none transparent scroll repeat 0% 0%; PADDING-BOTTOM: 0px; MARGIN: 0px 15px 0px 25px; BORDER-TOP-STYLE: none; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+#innerNavBar {
+	PADDING-RIGHT: 18px; PADDING-LEFT: 18px; BACKGROUND: none transparent scroll repeat 0% 0%; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-TOP-STYLE: none; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+#mainNav LI {
+	BORDER-RIGHT: #e9e7da 1px solid; PADDING-RIGHT: 8px; BORDER-TOP: #e9e7da 1px solid; DISPLAY: block; PADDING-LEFT: 8px; BACKGROUND: url(images/ico_02.jpg) repeat-x left bottom; LEFT: 0px; PADDING-BOTTOM: 1px; MARGIN: 6px 2px 0px 0px; BORDER-LEFT: #e9e7da 1px solid; CURSOR: pointer; PADDING-TOP: 0px; BORDER-BOTTOM: #e9e7da 1px solid; TOP: 0px
+}
+#mainNav LI.active {
+	BORDER-TOP-WIDTH: 1px; PADDING-RIGHT: 8px; PADDING-LEFT: 8px; BACKGROUND: url(images/ico_01.jpg) repeat-x left top; PADDING-BOTTOM: 2px; MARGIN: 5px 2px 0px 0px; CURSOR: auto; BORDER-TOP-COLOR: #e9e7da; PADDING-TOP: 2px; BORDER-BOTTOM-STYLE: none
+}
+#mainNav LI.private {
+	BACKGROUND: #fff6cd
+}
+#mainNav LI.hover {
+	BORDER-LEFT-COLOR: red; BORDER-BOTTOM-COLOR: red; BORDER-TOP-COLOR: red; BORDER-RIGHT-COLOR: red
+}
+#mainNav LI.active SPAN {
+	COLOR: #000
+}
+#mainNav LI .pageTitle {
+	COLOR: #444
+}
+#mainNav LI .pageTitleHover {
+	BACKGROUND-COLOR: #ddd
+}
+#modContainerInfo {
+	MARGIN: 0px 19px 5px; POSITION: relative
+}
+#mainNav .private .pageTitle {
+	COLOR: #444
+}
+.modCtnInfo-private {
+	MARGIN: -36px 14px 0px
+}
+#neckWrapper {
+	BACKGROUND: none transparent scroll repeat 0% 0%; MARGIN: 0px
+}
+#innerNeckWrapper {
+	BACKGROUND: none transparent scroll repeat 0% 0%; MARGIN: 0px
+}
+#mainWrapper {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: url(images/mainWrapper.jpg) repeat-y center top; PADDING-BOTTOM: 0px; MARGIN: 33px 18px 0px; BORDER-TOP-STYLE: none; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+#innerMainWrapper {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-TOP-STYLE: none; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+#modContainer {
+	MARGIN-TOP: 0px; PADDING-TOP: 0px
+}
+#mainNav #newPageBtn {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; BACKGROUND: url(images/ico_addPage.gif) no-repeat center 50%; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: 11px 0px 0px 4px; PADDING-TOP: 0px
+}
+.mod {
+	BACKGROUND-POSITION: left top; BACKGROUND-IMAGE: url(images/mod.jpg); BORDER-TOP-STYLE: none; BACKGROUND-REPEAT: no-repeat; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+.mod .modFrame {
+	BACKGROUND-POSITION: left bottom; BACKGROUND-IMAGE: url(images/modFrame.jpg); BORDER-TOP-STYLE: none; BACKGROUND-REPEAT: no-repeat; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+.mod .modTable {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.mod TBODY {
+	
+}
+.mod .mheader {
+	BACKGROUND: none transparent scroll repeat 0% 0%; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+.mod .lt {
+	BACKGROUND: none transparent scroll repeat 0% 0%; WIDTH: 4px
+}
+.mod .t {
+	PADDING-RIGHT: 6px; BACKGROUND-POSITION: right top; PADDING-LEFT: 5px; BACKGROUND-IMAGE: url(images/mod_t.jpg); BORDER-TOP-STYLE: none; PADDING-TOP: 2px; BACKGROUND-REPEAT: no-repeat; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; HEIGHT: 35px; BORDER-BOTTOM-STYLE: none
+}
+.mod .modHeader {
+	PADDING-BOTTOM: 10px; PADDING-TOP: 0px
+}
+.mod .rt {
+	BACKGROUND-POSITION: right top; BACKGROUND-IMAGE: url(images/mod_rt.jpg); WIDTH: 4px; BACKGROUND-REPEAT: no-repeat
+}
+.mod .mneck {
+	PADDING-RIGHT: 16px; PADDING-LEFT: 25px; BACKGROUND: none transparent scroll repeat 0% 0%; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+.mod .ec {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: none transparent scroll repeat 0% 0%; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.mod .modEditCon {
+	BACKGROUND: none transparent scroll repeat 0% 0%; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+.mod .mbody {
+	BACKGROUND: none transparent scroll repeat 0% 0%; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+.mod .l {
+	BACKGROUND: url(images/mod_l.jpg) repeat-y left top; WIDTH: 4px
+}
+.mod .c {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; BACKGROUND: none transparent scroll repeat 0% 0%; PADDING-BOTTOM: 4px; OVERFLOW: hidden; PADDING-TOP: 4px
+}
+.mod .modCon {
+	OVERFLOW: hidden
+}
+.mod .r {
+	BACKGROUND-POSITION: right top; BACKGROUND-IMAGE: url(images/mod_r.jpg); WIDTH: 4px; BACKGROUND-REPEAT: repeat-y
+}
+.mod .mfooter {
+	
+}
+.mod .lb {
+	WIDTH: 4px
+}
+.mod .b {
+	BACKGROUND-POSITION: right bottom; BACKGROUND-IMAGE: url(images/mod_b.jpg); BACKGROUND-REPEAT: no-repeat; HEIGHT: 9px
+}
+.mod .rb {
+	BACKGROUND-POSITION: right bottom; BACKGROUND-IMAGE: url(images/mod_rb.jpg); WIDTH: 4px; BACKGROUND-REPEAT: no-repeat
+}
+.mod .modShow IMG {
+	
+}
+.mod .modHide IMG {
+	
+}
+.mod .modHide IMG {
+	
+}
+.mod .modTitle {
+	COLOR: #444444
+}
+.mod .modTitle A {
+	COLOR: #444444
+}
+.mod .modTitle A:hover {
+	COLOR: #f60
+}
+.mod .modEdit A {
+	COLOR: #444444; TEXT-DECORATION: underline
+}
+.mod .modEdit A:hover {
+	COLOR: #f60
+}
+.mod .modCls IMG {
+	
+}
+.mod .modRfs IMG {
+	
+}
+.item {
+	
+}
+.item-top {
+	
+}
+.item-bottom {
+	
+}
+.item HR {
+	
+}
+.item-title {
+	BORDER-BOTTOM: #a7a7a7 1px solid
+}
+.item-title H3 A:hover {
+	COLOR: #f60
+}
+.item-title H3 {
+	COLOR: #444444
+}
+.item-title H3 A {
+	COLOR: #444444
+}
+.item-label {
+	
+}
+.item-label A {
+	COLOR: #333
+}
+.item-body {
+	
+}
+.item-body-hidden {
+	
+}
+.item-content {
+	
+}
+.item-content {
+	COLOR: #333; BORDER-BOTTOM: #a7a7a7 1px solid
+}
+.item-content A {
+	COLOR: #f60
+}
+.item-content A:hover {
+	COLOR: #666
+}
+.item-info {
+	COLOR: #f60
+}
+.item-info A {
+	COLOR: #f60
+}
+.item-info A:hover {
+	COLOR: #666
+}
+#tooltip {
+	BORDER-RIGHT: #eee 3px solid; BORDER-TOP: #eee 3px solid; Z-INDEX: 2000; BACKGROUND: white; BORDER-LEFT: #eee 3px solid; BORDER-BOTTOM: #eee 3px solid; POSITION: absolute
+}
+#tooltip .modFrame {
+	BORDER-RIGHT: #ccc 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #ccc 1px solid; PADDING-LEFT: 5px; BACKGROUND: none transparent scroll repeat 0% 0%; PADDING-BOTTOM: 5px; OVERFLOW: hidden; BORDER-LEFT: #ccc 1px solid; PADDING-TOP: 5px; BORDER-BOTTOM: #ccc 1px solid
+}
+#tooltip .modFrame {
+	BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #333
+}
+#tooltip .modFrame DIV {
+	BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #333
+}
+.entries-content .entriesAdd A {
+	FONT-WEIGHT: bold; COLOR: #ff0000
+}
+.entries-content .entriesAdd A:hover {
+	FONT-WEIGHT: bold; COLOR: #f60
+}
+.item-more {
+	FONT-WEIGHT: bold; COLOR: #444; TEXT-ALIGN: right
+}
+.item-more A {
+	FONT-WEIGHT: bold; COLOR: #444
+}
+.item-more A:hover {
+	COLOR: #f60
+}
+#footer {
+	CLEAR: both; BACKGROUND: url(images/foot.jpg) no-repeat center top; WIDTH: 996px; HEIGHT: 127px
+}
+#innerFooter {
+	PADDING-RIGHT: 15px; PADDING-LEFT: 22px; PADDING-BOTTOM: 0px; BORDER-TOP-STYLE: none; PADDING-TOP: 25px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; TEXT-ALIGN: center; BORDER-BOTTOM-STYLE: none
+}
+#contact {
+	PADDING-BOTTOM: 6px; MARGIN: 0px; COLOR: #fff; PADDING-TOP: 6px
+}
+#contact A {
+	COLOR: #fff
+}
+#contact A:hover {
+	COLOR: #333
+}
+#powered {
+	PADDING-BOTTOM: 6px; MARGIN: 0px; PADDING-TOP: 6px
+}
+#copyright {
+	PADDING-BOTTOM: 6px; MARGIN: 0px; COLOR: #fff; PADDING-TOP: 6px
+}
+.modCtnInfo-noMod {
+	COLOR: #333
+}
+.Feeds-content LI A {
+	COLOR: #777777
+}
+.Feeds-content LI A:hover {
+	COLOR: #f60
+}
+.texta:link {
+	TEXT-DECORATION: none
+}
+.texta:hover {
+	TEXT-DECORATION: none
+}
+.referItem A {
+	TEXT-DECORATION: none
+}
+.referItem A:hover {
+	TEXT-DECORATION: none
+}
+.profile-content HR {
+	CLEAR: both; BORDER-TOP: #a7a7a7 1px solid; MARGIN: -5px 0px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; HEIGHT: 1px; BORDER-BOTTOM-STYLE: none
+}
+.profile-content .profileMng {
+	MARGIN-BOTTOM: 3px; BORDER-BOTTOM: #a7a7a7 1px solid; TEXT-ALIGN: right
+}
+.messages-content .msg {
+	CLEAR: both; MARGIN-BOTTOM: 3px; PADDING-TOP: 2px; BORDER-BOTTOM: #a7a7a7 1px solid
+}
+.links-content .link {
+	CLEAR: both; MARGIN-BOTTOM: 3px; PADDING-TOP: 2px; BORDER-BOTTOM: #a7a7a7 1px solid
+}
+.Custom_Links-content .link {
+	CLEAR: both; MARGIN-BOTTOM: 3px; PADDING-TOP: 2px; BORDER-BOTTOM: #a7a7a7 1px solid
+}
+.links-content .linksAdd {
+	MARGIN-BOTTOM: 3px; PADDING-BOTTOM: 2px; BORDER-BOTTOM: #a7a7a7 1px solid; TEXT-ALIGN: right
+}
+.Custom_Links-content .linksAdd {
+	MARGIN-BOTTOM: 3px; PADDING-BOTTOM: 2px; BORDER-BOTTOM: #a7a7a7 1px solid; TEXT-ALIGN: right
+}

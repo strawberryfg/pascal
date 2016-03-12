@@ -1,0 +1,21 @@
+var m, n, k, i, x, y, v : integer;
+
+
+begin
+  randomize;
+  assign(output, 'view5.in'); rewrite(output);
+  readln(m, n, k);
+
+  writeln(m);
+  writeln(n);
+  for i := 1 to n do
+    begin
+      y := random(m) + 1;
+      x := random(y) + 1;
+      v := random(100) + 1;
+      writeln(x, ' ', y, ' ', v)
+    end;
+  writeln(k);
+
+  close(output);
+end.

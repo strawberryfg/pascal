@@ -1,0 +1,591 @@
+From: =?gb2312?B?08kgV2luZG93cyBJbnRlcm5ldCBFeHBsb3JlciA4ILGjtOY=?=
+Subject: USACO Problems
+Date: Sun, 1 May 2011 16:26:15 +0800
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01CC081C.7DEB7070"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.0.6002.18263
+
+这是 MIME 格式的多方邮件。
+
+------=_NextPart_000_0000_01CC081C.7DEB7070
+Content-Type: text/html;
+	charset="gb2312"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://ace.delos.com/ioiupload?d=silver&a=PINQHg7dV0j&lang=en
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>USACO Problems</TITLE>
+<META content=3D"text/html; charset=3Dgb2312" http-equiv=3DContent-Type>
+<META content=3Dno-cache http-equiv=3DPragma>
+<SCRIPT language=3Djavascript>=0A=
+<!--=0A=
+    var endtime;=0A=
+    =0A=
+    function initcount(secondsleft) {=0A=
+        var now =3D new Date();=0A=
+        return now.getTime() + secondsleft*1000;=0A=
+    }=0A=
+    function count1(i) { i =3D i - i%1; return i; } =0A=
+    function count2(i) { i =3D i - i%1; if (i < 10) return "0"+i; return =
+i; }=0A=
+    function updateclock(head, word, endtime) {=0A=
+        var now =3D new Date();=0A=
+        var delta =3D (endtime - now.getTime())/1000;=0A=
+        var s, x;=0A=
+        if(delta < 1)=0A=
+            s =3D head + " has ended";=0A=
+        else{=0A=
+            s =3D head + " ends: ";=0A=
+            s =3D head + ": ";=0A=
+            if(delta >=3D 24*3600)=0A=
+                s =3D s + count1(delta/86400) + "d";=0A=
+            if(delta >=3D 3600)=0A=
+                s =3D s + count2((delta/3600)%24) + "h";=0A=
+            if(delta >=3D 60)=0A=
+                s =3D s + count2((delta/60)%60) + "m";=0A=
+            s =3D s + count2(delta%60) + "s";=0A=
+            setTimeout("updateclock('"+head+"','"+word+"',"+endtime+")", =
+500);=0A=
+        }=0A=
+=0A=
+        var slot =3D document.getElementById(word);=0A=
+        slot.innerHTML =3D s;=0A=
+    }=0A=
+-->=0A=
+</SCRIPT>
+
+<STYLE type=3Dtext/css>TABLE {
+	FONT-FAMILY: Helvetica, Verdana, Arial, SunSans-Regular, Sans-Serif
+}
+TD {
+	FONT-FAMILY: Helvetica, Verdana, Arial, SunSans-Regular, Sans-Serif
+}
+BODY {
+	FONT-FAMILY: Helvetica, Verdana, Arial, SunSans-Regular, Sans-Serif
+}
+</STYLE>
+
+<META name=3DGENERATOR content=3D"MSHTML 8.00.6001.19019"></HEAD>
+<BODY onload=3D"" background=3Dhttp://ace.delos.com/usaco/bg9.jpg><FONT=20
+face=3D"Verdana,Helvetica,Tahoma,sans-serif,Arial,Lucida Sans,Gill =
+Sans">
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD><IMG src=3D"http://ace.delos.com/usaco/cowhead2.gif"> </TD>
+    <TD vAlign=3Dtop>
+      <TABLE cellSpacing=3D0 cellPadding=3D0>
+        <TBODY>
+        <TR>
+          <TD>Contest: MAR11</TD></TR>
+        <TR>
+          <TD></TD></TR>
+        <TR>
+          <TD></TD></TR>
+        <TR>
+          <TD></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><FONT=20
+color=3Dred><B></B></FONT><BR><FONT size=3D6 <b>ANALYSIS =
+MODE</B></FONT><BR>Submit=20
+solutions for your own enjoyment. =
+</FONT><PRE>*************************************************************=
+*********
+                           SILVER PROBLEMS
+**********************************************************************
+                  Three problems numbered 6 through 8
+**********************************************************************
+
+Problem 6: Meeting Place [Damon Doucet, 2011]
+
+Bessie and Jonell are great friends. Since Farmer John scrambles
+where the cows graze every day, they are sometimes quite far from
+each other and can't talk.
+
+The pastures and paths on FJ's farm form a 'tree' structure.  Each
+pasture has exactly one distinct path to any other pasture, and
+each pasture (except pasture #1, the 'root') also has a single
+parent node.
+
+Bessie and Jonell have decided that they will always meet at the
+closest pasture that that is both an ancestor of Jonell's pasture
+and of Bessie's pasture.
+
+FJ created a map of his N (1 &lt;=3D N &lt;=3D 1,000) pastures =
+(conveniently
+numbered 1..N) that tells the parent P_i (1 &lt;=3D P_i &lt;=3D N) of =
+each
+pasture except pasture 1, which has no parent.
+
+FJ has released his daily grazing schedule for the next M (1 &lt;=3D M
+&lt;=3D 1,000) days, so Bessie and Jonell are deciding where they should
+meet each day for gossip. On day k, Bessie is in pasture B_k (1 &lt;=3D
+B_k &lt;=3D N) and Jonell is in pasture J_k (1 &lt;=3D J_k &lt;=3D N).
+
+Given a map and schedule, help Bessie and Jonell find their meeting
+places.
+
+Consider, for example, the following farm layout:
+
+                            Pasture      Parent Pasture
+             [1]           ---------    ----------------
+            / | \              1              ---
+           /  |  \             2               1=20
+         [2] [3] [6]           3               1
+         /        | \          4               2
+        /         |  \         5               8
+      [4]        [8]  [9]      6               1
+                /   \          7               8
+               /     \         8               6
+             [5]     [7]       9               6
+
+Here are the meeting places that Bessie and Jonell would choose
+given a six day schedule of their initial grazing locations:
+
+              Bessie      Jonell       Meeting Place
+             --------    --------     ---------------
+                 2           7               1
+                 4           2               2
+                 1           1               1
+                 4           1               1
+                 7           5               8
+                 9           5               6
+
+PROBLEM NAME: meetplace
+
+INPUT FORMAT:
+
+* Line 1: Two space-separated integers: N and M
+
+* Lines 2..N: Line i contains a single integer that describes the
+        parent of pasture i:  P_i
+
+* Lines N+1..N+M: Line k+N describes Bessie and Jonell's respective
+        pastures with two space-separated integers: B_k and J_k
+
+SAMPLE INPUT (file meetplace.in):
+
+9 6
+1
+1
+2
+8
+1
+8
+6
+6
+2 7
+4 2
+3 3
+4 1
+7 5
+9 5
+
+OUTPUT FORMAT:
+
+* Lines 1..M: Line j contains the meeting place Bessie and Jonell
+        would use for line j+N of the input
+
+SAMPLE OUTPUT (file meetplace.out):
+
+1
+2
+3
+1
+8
+6
+
+**********************************************************************
+
+Problem 7: Package Delivery [Damon Doucet, 2011]
+
+Farmer John must deliver a package to Farmer Dan, and is preparing
+to make his journey. To keep the peace, he gives a tasty treat to
+every cow that he meets along his way and, of course, FJ is so
+frugal that he would like to encounter as few cows as possible.
+
+FJ has plotted a map of N (1 &lt;=3D N &lt;=3D 50,000) barns, connected =
+by M
+(1 &lt;=3D M &lt;=3D 50,000) bi-directional cow paths, each with C_i (0 =
+&lt;=3D
+C_i &lt;=3D 1,000) cows ambling along it. A cow path connects two =
+distinct
+barns, A_i and B_i (1 &lt;=3D A_i &lt;=3D N; 1 &lt;=3D B_i &lt;=3D N; =
+A_i !=3D B_i). Two
+barns may be directly connected by more than one path. He is currently
+located at barn 1, and Farmer Dan is located at barn N.
+
+Consider the following map:
+
+           [2]---
+          / |    \
+         /1 |     \ 6
+        /   |      \
+     [1]   0|    --[3]
+        \   |   /     \2
+        4\  |  /4      [6]
+          \ | /       /1
+           [4]-----[5]=20
+                3 =20
+
+The best path for Farmer John to take is to go from 1 -&gt; 2 -&gt; 4 =
+-&gt;
+5 -&gt; 6, because it will cost him 1 + 0 + 3 + 1 =3D 5 treats.
+
+Given FJ's map, what is the minimal number of treats that he should
+bring with him, given that he will feed each distinct cow he meets
+exactly one treat? He does not care about the length of his journey.
+
+PROBLEM NAME: packdel
+
+INPUT FORMAT:
+
+* Line 1: Two space-separated integers: N and M
+
+* Lines 2..M+1: Three space-separated integers: A_i, B_i, and C_i
+
+SAMPLE INPUT (file packdel.in):
+
+6 8
+4 5 3
+2 4 0
+4 1 4
+2 1 1
+5 6 1
+3 6 2
+3 2 6
+3 4 4
+
+OUTPUT FORMAT:
+
+* Line 1: The minimum number of treats that FJ must bring
+
+SAMPLE OUTPUT (file packdel.out):
+
+5
+
+**********************************************************************
+
+Problem 8: Bovine Bridge Battle [Richard Ho, 2007]
+
+Each of Farmer John's N (4 &lt;=3D N &lt;=3D 1,000) cows is patiently =
+waiting
+in the main pasture with cow i at point with integer coordinates
+(X_i, Y_i) (-1,000,000,000 &lt;=3D X_i &lt;=3D 1,000,000,000; =
+-1,000,000,000
+&lt;=3D Y_i &lt;=3D 1,000,000,000).
+
+The cows wish to form into groups of four in order to play Bridge,
+their new favorite card game. Each group must satisfy an important
+constraint: four cows are allowed to team up if and only if there
+exists some point X somewhere in the plane (and not coincident with
+any of the four points of the potential group of four) such that
+rotating any of the group's cows 180 degrees about that point X
+gives the position of some other cow in the group.
+
+Please help the cows determine the number of sets of four cows that
+can form a Bridge group.
+
+By way of example, suppose eight cows are standing at eight points:
+
+                  |
+                 f*
+                  |             a =3D (-3, 1)    e =3D (-1, 1)
+           b*     |             b =3D (-2, 2)    f =3D ( 0, 3)
+        a      e  |             c =3D (-3, 0)    g =3D ( 2, 0)
+         *     *  |             d =3D (-2, 0)    h =3D ( 3, 0)
+         c  d     |     g  h
+---------*--*-----+-----*--*---------
+                  |
+
+Then the three legal sets of four cows are {a, b, e, d} (they rotate
+around point (-2, 1)), {b, c, e, f} (around the point (-1.5, 1.5)),
+and {c, d, g, h} (around (0,0)).
+
+The supplied locations of the cows given are all distinct, although
+they are supplied in no particular order. Furthermore, the answer
+will fit into a signed 32-bit integer.
+
+PROBLEM NAME: rotsym
+
+INPUT FORMAT:
+
+* Line 1: A single integer: N
+
+* Lines 2..N+1: Line i+1 contains two space-separated integers: X_i
+        and Y_i
+
+SAMPLE INPUT (file rotsym.in):
+
+8
+-3 0
+-2 0
+-1 1
+0 3
+2 0
+-3 1
+3 0
+-2 2
+
+OUTPUT FORMAT:
+
+* Line 1: A single integer that is the number of sets of 4 cows that
+        form valid groups for bridge.
+
+SAMPLE OUTPUT (file rotsym.out):
+
+3
+
+**********************************************************************
+
+</PRE>
+<HR>
+
+<FORM encType=3Dmultipart/form-data method=3Dpost =
+action=3D/ioiupload><INPUT=20
+value=3DPINQHg7dV0j type=3Dhidden name=3Da>=20
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE border=3D0 cellSpacing=3D0 cellPadding=3D0 width=3D"100%"=20
+        bgColor=3D#000000><TBODY>
+        <TR>
+          <TD height=3D1></TD></TR>
+        <TR>
+          <TD width=3D1>
+          <TD><FONT=20
+            face=3D"Verdana,Helvetica,Tahoma,sans-serif,Arial,Lucida =
+Sans,Gill Sans">
+            <TABLE cellPadding=3D5 width=3D"100%" bgColor=3D#bfffbf>
+              <TBODY>
+              <TR>
+                <TD><B>Submit a program for grading:&nbsp;<B><INPUT =
+type=3Dfile=20
+                  name=3Dfilename> &nbsp;&nbsp; <INPUT value=3DSubmit =
+type=3Dsubmit =
+name=3Dsubmit></B></B></TD></TR></TBODY></TABLE></FONT></TD>
+          <TD width=3D1></TD></TR>
+        <TR height=3D1>
+          <TD></TD></TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD>
+      <HR>
+    </TD></TR>
+  <TR>
+    <TD>
+      <TABLE border=3D0 cellSpacing=3D0 cellPadding=3D0 width=3D"100%"=20
+        bgColor=3D#000000><TBODY>
+        <TR>
+          <TD height=3D1></TD></TR>
+        <TR>
+          <TD width=3D1>
+          <TD>
+            <TABLE cellPadding=3D5 width=3D"100%" bgColor=3D#bfffbf>
+              <TBODY>
+              <TR>
+                <TD colSpan=3D2><FONT=20
+                  =
+face=3D"Verdana,Helvetica,Tahoma,sans-serif,Arial,Lucida Sans,Gill =
+Sans"><B>To=20
+                  run your program with your own test data, enter the=20
+                  program<BR>file name and input file name then click=20
+                  'Test':</B></FONT></TD></TR>
+              <TR>
+                <TD>
+                  <TABLE>
+                    <TBODY>
+                    <TR>
+                      <TD>
+                        <TABLE>
+                          <TBODY>
+                          <TR>
+                            <TD><FONT=20
+                              =
+face=3D"Verdana,Helvetica,Tahoma,sans-serif,Arial,Lucida Sans,Gill =
+Sans"><B>Program&nbsp;File:&nbsp;</B></FONT></TD>
+                            <TD><INPUT type=3Dfile =
+name=3Dtestprogramname></TD></TR>
+                          <TR>
+                            <TD align=3Dright><FONT=20
+                              =
+face=3D"Verdana,Helvetica,Tahoma,sans-serif,Arial,Lucida Sans,Gill =
+Sans"><B>Input&nbsp;File:&nbsp;</B></FONT></TD>
+                            <TD><INPUT type=3Dfile=20
+                          =
+name=3Dtestfilename></TD></TR></TBODY></TABLE></TD>
+                      <TD>&nbsp;&nbsp;</TD>
+                      <TD><INPUT value=3DTest type=3Dsubmit =
+name=3Dsubmit></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD>
+          <TD width=3D1></TD></TR>
+        <TR height=3D1>
+          <TD></TD></TR></TBODY></TABLE></TD></TD>
+  <TR>
+    <TD>
+      <HR>
+    </TD></TR>
+  <TR>
+    <TD>
+      <TABLE border=3D0 cellSpacing=3D0 cellPadding=3D0 width=3D"100%"=20
+        bgColor=3D#000000><TBODY>
+        <TR>
+          <TD height=3D1></TD></TR>
+        <TR>
+          <TD width=3D1></TD>
+          <TD>
+            <TABLE cellPadding=3D5 width=3D"100%" bgColor=3D#bfffbf>
+              <TBODY>
+              <TR>
+                <TD><FONT=20
+                  =
+face=3D"Verdana,Helvetica,Tahoma,sans-serif,Arial,Lucida Sans,Gill =
+Sans"><B>Backup=20
+                  a file:&nbsp;</B><INPUT type=3Dfile =
+name=3Dbackupfilename>=20
+                  &nbsp;&nbsp;&nbsp;<INPUT value=3DBackup type=3Dsubmit =
+name=3Dsubmit>=20
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+<INPUT value=3D"See Backups" type=3Dsubmit name=3Dsubmit>=20
+              </FONT></TD></TR></TBODY></TABLE></TD>
+          <TD width=3D1></TD></TR>
+        <TR>
+          <TD height=3D1>
+          <TD></TD></TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD>
+      <HR>
+    </TD></TR></TBODY></TABLE><TR><TD>Nothing is currently saved for=20
+grading.</TD></TR>
+<HR>
+=20
+<CENTER><A href=3D"http://ace.delos.com/ioiedit?a=3DPINQHg7dV0j">Edit =
+your database=20
+record</A>&nbsp;|&nbsp; <A=20
+href=3D"http://ace.delos.com/ioiupload?a=3DPINQHg7dV0j&amp;logout=3D1">Lo=
+gout </A><!--<a href=3D"https://ace.delos.com/rules.html" =
+target=3D"_blank"> Rules </a>-->&nbsp;|&nbsp;=20
+<A =
+href=3D"http://ace.delos.com/ioiupload?init=3D1&amp;a=3DPINQHg7dV0j">Main=
+ contest=20
+index</A> </CENTER><!--&nbsp;|&nbsp;-->
+<CENTER><A=20
+href=3D"http://ace.delos.com/ioiupload?a=3DPINQHg7dV0j&amp;showsubmit">Se=
+e submitted=20
+solutions</A> &nbsp;|&nbsp; <A=20
+href=3D"http://ace.delos.com/ioiupload?a=3DPINQHg7dV0j&amp;suggestionbox"=
+>Send=20
+message to operations staff</A> &nbsp;|&nbsp; Phone: +1 719-321-7333=20
+<BR>Director is not online<BR>This page was generated at 8:26:13 GMT.=20
+</CENTER></FORM></BODY></HTML>
+
+------=_NextPart_000_0000_01CC081C.7DEB7070
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://ace.delos.com/usaco/cowhead2.gif
+
+R0lGODlhQQBRAPYAAP///wgICBAQEBgYGM7Ozvfv7//39/8AALWEa4RSAP/3nP/vABAQGAgIEL21
+xjkxQtbO3s7G1rWtvTEpOSkhMca9zkI5SiEYKVpKY2NSa1JCWko5UoxzlHNae2tSc5x7pbWUva2M
+taWErb2UxpRznPfO/9at3saczt6t57WMvffG/9al3v/3/87GztbO1t7W3ufe5721va2lrbWttca9
+xpSMlJyUnKWcpf/v/9bG1r2tvc69zrWltf/n///e/zkxOTEpMf/W/1pKWoRrhK2MrSkhKVJCUntj
+e//O/86lzvfG96WEpZx7nHNac72Uvee155RzlLWMtUo5SmtSa4xrjK2ErYRjhGNKY0IxQqV7pVpC
+WntaeyEYITkpOVI5UjEhMRgQGCkYKRAIEAgACPe97wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5
+BAEAAAcALAAAAABBAFEAAAf+gAeCg4SFhoeIiYJlio2Oj5AHZZOTkZaXiJRlCQmbnZigkZqdm56k
+oZiaqpScrZ2cpqWol5Otpq62sLaejLOirre4pby3vb6PsbjAr7rCx5DByrmkypXPjbXM0snb147R
+1dPd3orgy9LO5Inm6O2f6ofs2u6w8Jnt8sLG9oPs+cD7+C1C9w+WLIH9CNKbFpBfMV4L5zWEp4mA
+RQKq8KXztqrMxY8gMWajN5EWpQUoUy6oGBLkv5LQyqicSXNSy48jx6WSmXISSp4ra3q8iZGkyZ4/
+eQJVOtPmTXkw4zVN+hNp0JVLifoTVbXrVaVMv/58ai5qIbBUv8r0Kfbqyqf++KBZbeuz7tqwa1vm
+BCbXK967dP3q1Wftm8qwNBN3XTvW5bl3hucmXlVz8VCcBJEpTjoJgOfPnk9azeuYVKy+PSmBLgO6
+NQC2gnEW1oQa6+pJCjp/1hTaK1aXvu5i3K2guHHWuI8jB9oT+CxKFlm/Pm48d/Xq0plzpnTsMnLl
+Za7nTp5799TDMQv30wQ+/HVK2M1vXolNeuiJ8MeTL67KeGvtWPWUiX3/dfRaeOxhlyCByKUW3U/x
+7BYAGGE0oNt/uyXYHoKudTTUWoboFoQKJJJ4m2oF9reKayweSNtZAJQoIxC8oZihjCXy1mKHLKoX
+AI4qBFEGjjpSAqSMF+7+6CKSDC4So4xIDHmkCkZOieOBSt43CZH3CQIGjl9aKeaRy2V5IJVAIrcI
+Fk++RqKUY74J55VYtrjllkeGtogmcaYpJoFKloEFmmm+FqKcc06pCplmgmalmmdRWeWjqxTaqKOF
+NjTkopRyimSWOn7GJQCHSpqoopN+uluH2QH6JKSEnNrnn6v1uCKrpc7aJ4Ydhqgbd7nqSuuqPaIi
+q7B01tnrc8g+et+OZn3T7JTK4trdtES6mqGhz+DZbJIF7kZOqmOCy+uB6ix3LKKB2gcsRyfCaaOd
+gL57jbYuNgrui+Oae6m2/FLkL722qifQvD1Cay9CkiCsisLRClxkqCc9MhwhqwivZrGvGGcs7sax
+FpzkhRGnKzKD7oIMI8bx6qlyP/p6+DLMoKoy81n4LnxziCnuDI2WPotisDqBAAA7
+
+------=_NextPart_000_0000_01CC081C.7DEB7070
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: http://ace.delos.com/usaco/bg9.jpg
+
+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
+
+------=_NextPart_000_0000_01CC081C.7DEB7070--

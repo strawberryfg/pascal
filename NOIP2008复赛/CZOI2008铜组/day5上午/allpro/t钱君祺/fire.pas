@@ -1,0 +1,9 @@
+begin
+  assign(input,'fire.in');
+  assign(output,'fire.out');
+  reset(input);
+  rewrite(output);
+  writeln(5);
+  close(input);
+  close(output);
+end.

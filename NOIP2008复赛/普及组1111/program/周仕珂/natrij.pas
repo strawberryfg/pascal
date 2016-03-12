@@ -1,0 +1,42 @@
+var s1,s2,t,sm,ss,sh:string;
+        h1,h2,m1,m2,se1,se2,total1,total2,ans,minute,hour,second:longint;
+begin
+assign(input,'natrij.in');
+reset(input);
+assign(output,'natrij.out');
+rewrite(output);
+readln(s1);
+readln(s2);
+t:=copy(s1,1,pos(':',s1)-1);
+val(t,h1);
+t:=copy(s2,1,pos(':',s2)-1);
+val(t,h2);
+delete(s1,1,pos(':',s1));
+delete(s2,1,pos(':',s2));
+t:=copy(s1,1,pos(':',s1)-1);
+val(t,m1);
+t:=copy(s2,1,pos(':',s2)-1);
+val(t,m2);
+delete(s1,1,pos(':',s1));
+delete(s2,1,pos(':',s2));
+val(s1,se1);
+val(s2,se2);
+total1:=h1*60*60+m1*60+se1;
+total2:=h2*60*60+m2*60+se2;
+if total2>=total1 then ans:=total2-total1
+                        else ans:=total2+24*60*60-total1;
+second:=ans mod 60;
+ans:=ans div 60;
+minute:=ans mod 60;
+ans:=ans div 60;
+hour:=ans;
+str(minute,sm);
+str(second,ss);
+str(hour,sh);
+if minute<10 then sm:='0'+sm;
+if hour<10 then sh:='0'+sh;
+if second<10 then ss:='0'+ss;
+writeln(sh,':',sm,':',ss);
+close(input);
+close(output);
+end.

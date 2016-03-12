@@ -1,0 +1,31 @@
+var n,h:longint; a:array[1..1000] of longint; x:char;
+procedure try(b,e,dep,che:longint);
+   var i,s,j,k,o,p:longint;
+   begin
+   if dep=0 then begin writeln(che); close(input); close(output); halt; end;
+            else for i:=e downto b do
+                    begin
+                    for j:=b to e-i+1 do
+                       begin
+                       o:=0; p:=0;
+                       for k:=j to i-j+1 do
+                         begin
+                         if a[k]=false then  o:=o+1
+                                       else p:=p+1;
+                         if abs(o-p)>h then break;
+                         end;
+                         if abs(o-p)<=h then begin
+                                             try(b,j-1,dep-i,che+1);
+                                             try(i-j+2,e,dep-i,che+1);
+                                             end;
+                       end;
+                    end;
+   end;
+begin
+readln(n,h);
+for i:=1 to n do
+   read(x);
+   if x='H' then a[i]:=true
+            else a[i]:=false;
+try(1,n,n,0);
+end.
